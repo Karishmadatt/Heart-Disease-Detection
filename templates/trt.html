@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="trt" action="{{url_for('trt')}}" method="post">
+        <label for="age">age:</label>
+        <input type="number" id="age" name="data1"><br><br>
+        <label for="sex">sex:</label>
+        <input type="number" id="sex" name="data2"><br><br>
+        <label for="cp">cp</label>
+        <input type="number" id="cp" name="data3"><br><br>
+        <label for="trestbps">trestbps:</label>
+        <input type="number" id="trestbps" name="data4"><br><br>
+        <label for="chol">chol:</label>
+        <input type="number" id="chol" name="data5"><br><br>
+        <label for="fbs">fbs:</label>
+        <input type="number" id="fbs" name="data6"><br><br>
+        <label for="restecg">restecg:</label>
+        <input type="number" id="restecg" name="data7"><br><br>
+        <label for="thalach">thalach:</label>
+        <input type="thalach" id="thalach" name="data8"><br><br>
+        <label for="exang">exang:</label>
+        <input type="number" id="exang" name="data9"><br><br>
+        <label for="oldpeak">oldpeak:</label>
+        <input type="number" id="oldpeak" name="data10"><br><br>
+        <label for="slope">slope:</label>
+        <input type="number" id="slope" name="data11"><br><br>
+        <label for="ca">ca</label>
+        <input type="number" id="ca" name="data12"><br><br>
+        <label for="thal">thal</label>
+        <input type="number" id="thal" name="data13"><br><br>
+        <input type="submit" value="Submit">
+        <p> prediction: {{pred}}</p>
+    
+        <p> For sex Male = '0' and Female = '1'</p>
+        <p> For cp 0 = typical , 1 = Atypical , 2 = Non-angina , 3 = Asymptomatic</p>
+        <p> For fbs 0 =  False , 1 =  True</p>
+        <p> For restecg 0 =  Normal , 1 = Having ST-T wave abnormality , 2 = Probable or definite left ventricular hypertrophy</p>
+        <p> For exang 0 = No , 1 = Yes</p>
+        <p> For slope 0 = unsloping , 1 = Flat , 2 = Downsloping</p>
+        <p> For thal 1 = normal; 2 = fixed defect; 3 = reversable defect</p>
+        <p> For ca number of major vessels (0-3) colored by flourosopy</p>
+    </form>
+</body>
+</html>

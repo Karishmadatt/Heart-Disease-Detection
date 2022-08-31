@@ -1,0 +1,79 @@
+  /* CSS RESET */
+  *{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+
+:root{
+    --navbar-height: 59px;
+}
+/* Navigation Bar */
+#navbar{
+    display: flex; 
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+#navbar::before{
+    content:"";
+    background-color: rgb(241, 44, 44);
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 5px 10px 25px;
+}
+#logo img{
+    margin: 3px 5px;
+    height: 30px;
+    border-radius: 5px;
+}
+#title strong{
+    display: flex;
+    font-family: 'Bree Serif', serif;
+    display: block;
+    padding: 0px 50px 3px 0px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3rem;
+}
+#title strong  u a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Bree Serif', serif;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    display: block;
+    padding: 3px 50px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color: white;
+}

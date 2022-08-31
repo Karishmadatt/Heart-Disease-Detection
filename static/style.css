@@ -1,0 +1,145 @@
+  /* CSS RESET */
+  *{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex; 
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+#navbar::before{
+    content:"";
+    background-color: rgb(241, 44, 44);
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 5px 10px 25px;
+}
+#logo img{
+    margin: 3px 5px;
+    height: 30px;
+    border-radius: 5px;
+}
+#title strong{
+    display: flex;
+    font-family: 'Bree Serif', serif;
+    display: block;
+    padding: 0px 50px 3px 0px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Bree Serif', serif;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    display: block;
+    padding: 3px 50px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    padding: 230px 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content:"";
+    background: url('../static/images/img_1.png') no-repeat center center/cover;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    margin-top: 60px;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    /* margin: 200px 0px 0px 80px; */
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    
+}
+
+
+/* Utility Class */
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-secondary{
+    font-size: 2.4rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(241, 44, 44);
+    color: white;
+    margin: 17px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+}
+.btn:hover{
+    background-color: white;
+    color: rgb(241, 44, 44);
+    border: 2px solid rgb(241, 44, 44);
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}

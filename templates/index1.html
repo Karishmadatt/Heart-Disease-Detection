@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Text input fields</h2>
+
+ <form id="predict" action="{{url_for('predict')}}" method="post">
+            
+            <div id="first">
+                <div class="inputs">
+                    <label for="age"><b>Age :</b></label>
+                    <input type="number" name="data1" id="age">
+                </div>
+                
+            <div class="inputs">
+                <label for="sex"><b>Sex :</b></label>
+                <select name="data2" id="sex"  >
+                    <option value="none" selected disabled hidden>-- Select an option --</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+            </div>
+            </div>
+
+            <div id="second">
+            <div class="inputs">
+                <label for="cpt"><b>Chest Pain Type :</b></label>
+                <select name="data3" id="cpt">
+                    <option value="none" selected disabled hidden>-- Select an option --</option>                   
+                    <option value = "0">Typical Angina</option>
+					<option value = "1">Atypical Angina</option>
+					<option value = "2">Non-anginal Pain</option>
+					<option value = "3">Asymptomatic</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="rbp"><b>Resting Blood Pressure in mm Hg :</b></label>
+                <input type="number" name = "data4" >
+            </div>
+            <div class="inputs">
+                <label for="chol"><b>Serum Cholestoral in mg/dl :</b></label>
+                <input name="data5" type="number">
+            </div>
+            <div class="inputs">
+                <label for="fbs"><b>Fasting Blood Sugar > 120 mg/dl :</b></label>
+                <select name="data6" id="fbs">
+                    <option value="none" selected disabled hidden>-- Select an option --</option>
+                    <option value="0">False</option>
+                    <option value="1">True</option>
+                </select>
+            </div>
+            </div>
+
+            <div id="third">
+            <div class="inputs">
+                <label for="restecg"><b>Resting ECG Results :</b></label>
+                <select name="data7" id="restecg">
+                    <option value="none" selected disabled hidden>-- Select an option --</option>
+                    <option value = "0">Normal</option>
+					<option value = "1">Having ST-T wave abnormality  </option>
+					<option value = "2"> Probable or definite left ventricular hypertrophy  </option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="mhr"><b>Maximum Heart Rate :</b></label>
+                <input name = "data8" type="number">
+            </div>
+            <div class="inputs">
+                <label for="std"><b>ST Depression Induced :</b></label>
+                <input name="data9" type="number">
+            </div>
+            <div class="inputs">
+                <label for="eia"><b>Exercise Induced Angina :</b></label>
+                <select name="data10" id="eia">
+                    <option value="none" selected disabled hidden>-- Select an option --</option>
+                    <option value = "0">No</option>
+					<option value = "1">Yes</option>
+                </select>
+            </div>
+            </div>
+
+            <div id="fourth">
+            <div class="inputs">
+                <label for="slope"><b>Slope of the Peak Exercise ST Segment :</b></label>
+                <select name="data11" id="slope">
+                    <option value="none" selected disabled hidden>-- Select an option --</option>
+                    <option value = "0">Upsloping</option>
+					<option value = "1">Flat</option>
+					<option value = "2">Downsloping</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="vcf"><b>Number of Vessels Colored by Flourosopy :</b></label>
+                <select name="data12" id="vcf">
+                    <option value="none" selected disabled hidden>-- Select an option --</option>
+                    <option value = "0">0</option>
+					<option value = "1">1</option>
+					<option value = "2">2</option>
+					<option value = "3">3</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="thal"><b>Thalassemia :</b></label>
+                <select name="data13" id="thal">
+                    <option value="none" selected disabled hidden>-- Select an option --</option>
+                    <option value = "3">Normal</option>
+					<option value = "6">Fixed defect</option>
+					<option value = "7">Reversable defect</option>
+                </select>
+            </div>
+            </div>
+
+            <div id="fifth">
+            <div class="inputs">
+                <button type="submit"  value="Result" ><b>Predict</b></button>
+            </div>
+            <div id ="result">
+                <strong style="color:rgb(255, 255, 255)">{{pred}}</strong>
+            </div>
+            </div>
+
+</form>

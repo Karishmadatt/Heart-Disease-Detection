@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <!-- <link rel="stylesheet" href="css/analysis.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <link rel="icon" href="/templates/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/analysis.css">
+    <!-- <link rel="stylesheet" href="/static/predict.css">
+    <link rel="stylesheet" href="/static/aboutus.css">
+    <link rel="stylesheet" href="/static/contactus.css"> -->
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/static/images/img_7.jpg" alt="Heart Disease Prediction Logo"">
+        </div>
+        <div id="Title">
+            <strong><u><a href="index.html">Heart Disease Predictor</a></u></strong>
+        </div>
+        <ul>
+            <!-- <li class="item"><a href="#">Heart Disease Predictor</a></li> -->
+            <li class="item"><a href="predict.html">Predictor</a></li>
+            <!-- <li class="item"><a href="analysis.html">Analysis</a></li> -->
+            <li class="item"><a href="blog.html">Blog Us</a></li>
+            <!-- <li class="item"><a href="aboutus.html">About Us</a></li> -->
+        </ul>
+    </nav>
+    <h1>Analysis Page.</h1>
+    <hr>
+    <div class="chartBox">
+        <canvas id="chart"></canvas>
+    </div>
+    <script>
+        const ctx = document.getElementById('chart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },            
+                // maintainAspectRatio : false                
+            }
+        });
+    </script>
+</body>
+
+</html>
